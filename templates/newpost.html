@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+        .error{
+            color: red;
+        }
+</style>
+    <h1>New Blog Post</h1>
+    <form action="/newpost" form method='POST'>
+        <label for="title">
+            Title:
+            <br>
+            <input type="text"  name= "title" id="title"  value=""/>
+            <span class="error">{{title_error}}</span>
+        </label>
+        <br>
+        <label for="title">
+            Type your title here: 
+            <br>
+            <input type="textarea"name="body"  id="body"  value="" />
+            <span class="error">{{body_error}}</span>
+        </label>
+        <br>
+        <input type="submit" value='Submit Post' />
+    </form>
+
+{% endblock %}

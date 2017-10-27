@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <br/>
+    <h1 align="center"><u>Build a Blog</h1></u>
+    {% if blogs|length == 0 %}
+    <p>No blogs created yet.</p>
+
+    {% else %}
+    <ul>
+        {% for post in blogs %}
+         <li>
+             <h1><a href=".?id={{post.id}}">{{post.title}}</a></h1>
+                <p>{{post.body}}</p>
+        </li>
+        {% endfor %}
+    {% endif %}
+    </ul>
+{% endblock %}

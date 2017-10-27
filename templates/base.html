@@ -1,0 +1,20 @@
+<!doctype html>
+
+<html>
+    <head>
+
+        <link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='styles/style.css') }}">
+        <title>{{title}}</title>
+
+    </head>
+
+<body>
+
+    <a href="/">Main Blog Page   </a><br/>
+    <a href="/newpost">   Create A Blog Entry</a>
+    {% block content %}
+    {% endblock %}
+
+</body>
+
+</html>
