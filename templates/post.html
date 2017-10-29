@@ -1,10 +1,15 @@
 {% extends "base.html" %}
-
 {% block content %}
-<p>
-    <h1>{{blog.title}}</h1>
-    <p>{{blog.body}}</p>
-</p
 
+<form action="/post", method="GET">
 
-{% endblock %}
+<div>
+
+    <h1>{{blog.title }} </a> </h1> 
+    <p>{{ blog.body }}</p>
+    <label> Blog by: <a href='/blog?user_id={{blog.id}}'> {{ user.username}}</a></label>
+</div>
+
+</form>
+
+{% endblock%}
